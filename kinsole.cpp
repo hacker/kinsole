@@ -16,7 +16,7 @@
 #include "windowsx.h"
 
 #define	DAMN_KIN_NAME		"KINSole"
-#define	DAMN_KIN_VERSION	"v1.00 Beta 3"
+#define	DAMN_KIN_VERSION	"1.1"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -550,7 +550,7 @@ main(int argc,char*argv[])
 	if(argc<2){
 usagebye:
 		printf(
-			DAMN_KIN_NAME " " DAMN_KIN_VERSION ", Copyright (c) 1998, 2002 Klever Group (http://www.klever.net/)\n\n"
+			DAMN_KIN_NAME " " DAMN_KIN_VERSION ", Copyright (c) 1998-2004 Klever Group (http://www.klever.net/)\n\n"
 			"Usage:\t" DAMN_KIN_NAME " [<options> ]<host-name/ip-address>[ <port>]\n\n"
 			"Options are:\n"
 			"-r## or -##\tSet number of rows in console screenbuffer\n"
@@ -562,7 +562,7 @@ usagebye:
 			"-v<var>=<val>\tPass user environment variable to remote server\n"
 			"-t<termtype>\tChange preferred terminal type\n"
 				"\tnote: there are only two different terminal emulations in this\n"
-				"\tbeta release - one for dumb terminal and one for vt terminal\n"
+				"\trelease - one for dumb terminal and one for vt terminal\n"
 		);
 		CleanEnvars();
 		return 1;

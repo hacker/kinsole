@@ -5,12 +5,12 @@
   <p><kin>KINSole</kin> is our <term>Win32</term> implementation of client side of the <term>telnet</term> protocol described in details in the <rfc num="854"/> and related RFCs (namely <rfc num="855"/>, <rfc num="857"/>, <rfc num="1091"/>, <rfc num="1073"/>, <rfc num="1572"/> and others). It uses <term>Win32</term> console and, therefore, can be run both windowed and in fullscreen mode.</p>
   <p/>
   <p><b><i>Enjoy!</i></b></p>
-  <license years="1998, 2002"/>
+  <license years="1998-2004"/>
   <credits/>
  </topic>
- <topic id="News" title="Beta News">
-  <heading scroll="no">Beta News</heading>
-  <newsfor version="1.00 Beta 3" date="August 19st, 2002">
+ <topic id="News" title="What's new">
+  <heading scroll="no">What's New</heading>
+  <newsfor version="1.1" date="July 11th, 2004">
    <ni>No changes in code. License change.</ni>
   </newsfor>
   <newsfor version="1.00 Beta 2" date="March 7th, 1998">
@@ -60,11 +60,11 @@
    <li><b>Alt-T</b> - Send <b>TIMING-MARK</b> request. As soon as response comes <kin>KINSole</kin> will flash window thrice or beep if window handle is not available for some reason.</li>
   </ul>
  </topic>
- <topic id="BetaNotes" title="Beta Notes">
-  <heading scroll="no">Beta Notes</heading>
-  <p>A few things you may want to know about this Beta Release:</p>
+ <topic id="Notes" title="Notes">
+  <heading scroll="no">Notes</heading>
+  <p>A few things you may want to know about this release:</p>
   <ul>
-   <li>Only two terminal emulation modules are included in this beta release - one for dumb terminal and one for vt100/102. If you try to select ANSI terminal type vt100 emulation will be selected, which is actually close enough to ANSI so you shouldn't suffer too much. Why would one want to use ANSI terminal emulation, anyway?</li>
+   <li>Only two terminal emulation modules are included in this release - one for dumb terminal and one for vt100/102. If you try to select ANSI terminal type vt100 emulation will be selected, which is actually close enough to ANSI so you shouldn't suffer too much. Why would one want to use ANSI terminal emulation, anyway?</li>
    <li>Telnet <b>LINEMODE</b> option (<rfc num="1184"/>) is still to come.</li>
    <li>Pasting of text using console toolbar button may cause <kin>KINSole</kin> to lock up. Use <b>Shift-INS</b> instead.</li>
   </ul>

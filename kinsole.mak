@@ -65,7 +65,7 @@ CLEAN :
 	-@erase "$(INTDIR)\kinsole.hl_"
 	-@erase "$(INTDIR)\kinsole.hlp"
 	-@erase "$(INTDIR)\KINSole.obj"
-	-@erase "$(INTDIR)\KINSole.res"
+	-@erase "$(INTDIR)\kinsole.res"
 	-@erase "$(OUTDIR)\kinsole.ex_"
 	-@erase "$(OUTDIR)\kinsole.exe"
 	-@erase "$(OUTDIR)\kinsole.map"
@@ -103,7 +103,7 @@ CPP_SBRS=.\.
 RSC=rc.exe
 # ADD BASE RSC /l 0x409 /d "NDEBUG"
 # ADD RSC /l 0x409 /d "NDEBUG"
-RSC_PROJ=/l 0x409 /fo"$(INTDIR)/KINSole.res" /d "NDEBUG" 
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)/kinsole.res" /d "NDEBUG" 
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
@@ -120,7 +120,7 @@ LINK32_FLAGS=kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib\
  /out:"$(OUTDIR)/kinsole.exe" 
 LINK32_OBJS= \
 	"$(INTDIR)\KINSole.obj" \
-	"$(INTDIR)\KINSole.res"
+	"$(INTDIR)\kinsole.res"
 
 "$(OUTDIR)\kinsole.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -166,7 +166,7 @@ CLEAN :
 	-@erase "$(INTDIR)\kinsole.hl_"
 	-@erase "$(INTDIR)\kinsole.hlp"
 	-@erase "$(INTDIR)\KINSole.obj"
-	-@erase "$(INTDIR)\KINSole.res"
+	-@erase "$(INTDIR)\kinsole.res"
 	-@erase "$(INTDIR)\vc40.idb"
 	-@erase "$(INTDIR)\vc40.pdb"
 	-@erase "$(OUTDIR)\kinsole.ex_"
@@ -207,7 +207,7 @@ CPP_SBRS=.\.
 RSC=rc.exe
 # ADD BASE RSC /l 0x409 /d "_DEBUG"
 # ADD RSC /l 0x409 /d "_DEBUG" /d "_AFXDLL"
-RSC_PROJ=/l 0x409 /fo"$(INTDIR)/KINSole.res" /d "_DEBUG" /d "_AFXDLL" 
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)/kinsole.res" /d "_DEBUG" /d "_AFXDLL" 
 BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
@@ -221,7 +221,7 @@ LINK32_FLAGS=wsock32.lib /nologo /subsystem:console /incremental:yes\
  /pdb:"$(OUTDIR)/kinsole.pdb" /debug /machine:I386 /out:"$(OUTDIR)/kinsole.exe" 
 LINK32_OBJS= \
 	"$(INTDIR)\KINSole.obj" \
-	"$(INTDIR)\KINSole.res"
+	"$(INTDIR)\kinsole.res"
 
 "$(OUTDIR)\kinsole.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
     $(LINK32) @<<
@@ -423,6 +423,9 @@ LINK32_OBJS= \
 # Begin Source File
 
 SOURCE=.\KINSole.cpp
+
+!IF  "$(CFG)" == "KINSole - Win32 Release"
+
 DEP_CPP_KINSO=\
 	".\NAWS.cpp"\
 	".\NEW-ENVIRON.cpp"\
@@ -437,18 +440,51 @@ DEP_CPP_KINSO=\
 "$(INTDIR)\KINSole.obj" : $(SOURCE) $(DEP_CPP_KINSO) "$(INTDIR)"
 
 
+!ELSEIF  "$(CFG)" == "KINSole - Win32 Debug"
+
+DEP_CPP_KINSO=\
+	".\NAWS.cpp"\
+	".\NEW-ENVIRON.cpp"\
+	".\options.cpp"\
+	".\status.cpp"\
+	".\terminal.cpp"\
+	".\TIMING-MARK.cpp"\
+	".\TTY.cpp"\
+	".\VT100.cpp"\
+	
+
+"$(INTDIR)\KINSole.obj" : $(SOURCE) $(DEP_CPP_KINSO) "$(INTDIR)"
+
+
+!ENDIF 
+
 # End Source File
 ################################################################################
 # Begin Source File
 
 SOURCE=.\kinsole.rc
+
+!IF  "$(CFG)" == "KINSole - Win32 Release"
+
 DEP_RSC_KINSOL=\
 	".\res\kinsole.ico"\
 	
 
-"$(INTDIR)\KINSole.res" : $(SOURCE) $(DEP_RSC_KINSOL) "$(INTDIR)"
+"$(INTDIR)\kinsole.res" : $(SOURCE) $(DEP_RSC_KINSOL) "$(INTDIR)"
    $(RSC) $(RSC_PROJ) $(SOURCE)
 
+
+!ELSEIF  "$(CFG)" == "KINSole - Win32 Debug"
+
+DEP_RSC_KINSOL=\
+	".\res\kinsole.ico"\
+	
+
+"$(INTDIR)\kinsole.res" : $(SOURCE) $(DEP_RSC_KINSOL) "$(INTDIR)"
+   $(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ENDIF 
 
 # End Source File
 ################################################################################
