@@ -1,0 +1,12 @@
+help-license-date	./help/kinsole.xml	/<license\s/;"	kind:d
+help-news	./help/kinsole.xml	/<newsfor\s/
+install-version	./install/install.cpp	/^#define\s\+KINAME\s\+"/;"	kind:v
+install-vsinfo-date	install/install.rc	/^\s\+VALUE\s\+"LegalCopyright",/;"	kind:d
+install-vsinfo-numeric-version	install/install.rc	/^\s\+FILEVERSION\s\+/;"	kind:v
+install-vsinfo-string-version	install/install.rc	/^\s\+VALUE\s\+"FileVersion",/;"	kind:v
+kinsole-version	kinsole.cpp	/^#define\s\+DAMN_KIN_VERSION\s\+"/;"	kind:v
+license-date	COPYING	:1;"	kind:d
+usage-date	kinsole.cpp	/, Copyright (c) /;"	kind:d
+vsinfo-date	kinsole.rc	/VALUE\s\+"LegalCopyright",/;"	kind:d
+vsinfo-numeric-version	kinsole.rc	/^\s\+FILEVERSION\s\+/;"	kind:v
+vsinfo-string-version	kinsole.rc	/^\s\+VALUE\s\+"FileVersion",/;"	kind:v

@@ -1,0 +1,26 @@
+
+# /
+/Debug
+/Release
+/debug
+/release
+/releast
+/DEBUG
+/RELEASE
+/*.mdp
+/*.ncb
+/*.aps
+
+# /help/
+/help/KINSOLE.HLP
+/help/kinsole.LOG
+/help/kinsole.GID
+
+# /install/
+/install/debug
+/install/release
+/install/Debug
+/install/Release
+/install/DEBUG
+/install/RELEASE
+/install/*.aps

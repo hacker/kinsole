@@ -1,0 +1,97 @@
+{\rtf1\ansi
+@{\footnote
+THIS FILE WAS AUTOMATICALLY GENERATED FROM XML DOCUMENT.
+DO NOT MODIFY THIS FILE DIRECTLY. EDIT XML DOCUMENT INSTEAD
+}
+{\fonttbl{\f0\froman Times New Roman;}{\f1\fswiss Arial;}{\f3\froman Symbol;}}{\colortbl;
+   \red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+   \red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;
+   \red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;
+   \red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+  
+\pard\plain\keepn
+#{\footnote About}
+${\footnote About KINSole}
+{ \f1\fs18\b\sb120 About KINSole}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 {\b KINSole} is our {\i Win32} implementation of client side of the {\i telnet} protocol described in details in the {\uldb {\b RFC854}}{\v %!ExecFile("http://www.rfc-editor.org/rfc/rfc854.txt")} and related RFCs (namely {\uldb {\b RFC855}}{\v %!ExecFile("http://www.rfc-editor.org/rfc/rfc855.txt")}, {\uldb {\b RFC857}}{\v %!ExecFile("http://www.rfc-editor.org/rfc/rfc857.txt")}, {\uldb {\b RFC1091}}{\v %!ExecFile("http://www.rfc-editor.org/rfc/rfc1091.txt")}, {\uldb {\b RFC1073}}{\v %!ExecFile("http://www.rfc-editor.org/rfc/rfc1073.txt")}, {\uldb {\b RFC1572}}{\v %!ExecFile("http://www.rfc-editor.org/rfc/rfc1572.txt")} and others). It uses {\i Win32} console and, therefore, can be run both windowed and in fullscreen mode.
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 {\b {\i Enjoy!}}
+{
+\par\pard\plain\sb360\sa120 \f1\fs16 Copyright (c) 1998, 2002 {\uldb\cf0 Klever Group (http://www.klever.net/)}{\v %!ExecFile("http://www.klever.net/")}
+\par\qj\sb120\sa120Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+\par The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+\par \sa360 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+}
+\par \sa0\sb120\ql \f1\fs16 Author: {\b\uldb\cf11 Michael Krelin ({\i hacker@klever.net})}{\v %!ExecFile("mailto:hacker@klever.net")}
+\par \sa0\sb0 Fan mail send to {\i\uldb gefilte@klever.net}{\v %!ExecFile("mailto:gefilte@klever.net")}
+\page
+
+\pard\plain\keepn
+#{\footnote News}
+${\footnote Beta News}
+{ \f1\fs18\b\sb120 Beta News}
+\par\pard\plain\f1\fs24\qc\cf2\b 1.00 Beta 3 - August 19st, 2002
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  No changes in code. License change.
+\par\pard\plain\f1\fs24\qc\cf2\b 1.00 Beta 2 - March 7th, 1998
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Better copying from {\b KINSole} window.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Better handling of cursor position when resizing window.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Sending {\b CR/LF} pair when pressing {\b ENTER}. This is of help when telnetting to non-telnet ports.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Corrected bug, preventing {\b KINSole} from pasting text to remote twice.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Improved handling of echoing. Previously {\b KINSole} didn't turn echo off on some systems, namely {\b Solaris}.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Typo causing {\b KINSole} not to show diamond characters in {\b VT10x} mode corrected.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  {\b GPF} when invoking {\b KINSole} with {\b -t} option fixed.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Hotkey ({\b Alt-INS}) for copy operation added. Not supposed to work under {\b\cf6 Windows NT}.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  {\b Paste} is made aware of local echoing.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Default terminal type when telnetting to non-telnet port is now {\b TTY}.
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  {\b Timing Mark} telnet option ({\uldb {\b RFC860}}{\v %!ExecFile("http://www.rfc-editor.org/rfc/rfc860.txt")}) implemented ({\b Alt-T}).
+\par\pard\plain\fi0\li0\f1\fs18 \bullet  Improved handling of window icon when starting from other {\i Win32} command line application.
+\page
+
+\pard\plain\keepn
+#{\footnote Using}
+${\footnote Using KINSole}
+{ \f1\fs18\b\sb120 Using {\b KINSole}}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 You may run {\b KINSole} from your MS-DOS prompt by typing '{\i kinsole host port}'.
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 If you need to know more about custom options, please proceed to the {\uldb Command Line Options}{\v CmdOptions} section.
+\page
+
+\pard\plain\keepn
+#{\footnote CmdOptions}
+${\footnote Command Line Options}
+{ \f1\fs18\b\sb120 Command Line Options}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Usage:
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 KINSole [{\i options} ]{\i host}[ {\i port}]
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 Available options are:\pard
+\par \fi0\li0 \bullet   {\b -r {\i ##}} or {\b -{\i ##}} - Try to set the number of rows in console screen buffer.
+\par \fi0\li0 \bullet   {\b -c {\i ##}} - Try to set the number of columns in console screenbuffer.
+\par \fi0\li0 \bullet   
+\par\sa120\sb120\qj\f1\fs16 Note: Changing of console's screenbuffer size either from command line or on remote host's request (ESC[?3h vt100/vt102 control sequence) may not work when in fullscreen mode.
+\par \fi0\li0 \bullet   {\b -l {\i username}} - Pass username to remote server in environment if remote server allows.
+\par \fi0\li0 \bullet   {\b -e {\i var}={\i val}} - Pass environment variable to remote server.
+\par \fi0\li0 \bullet   {\b -v {\i var}={\i val}} - Pass user environment variable to remote server.
+\par \fi0\li0 \bullet   {\b -t {\i termtype}} - Change preferred terminal type to pass to remote server. This option does not really force specific terminal emulation. Final decision on terminal type is left up to server. Both sides are supposed to negotiate terminal type when connecting so that both sides may feel satisfied. Default preference is {\b vt102}.\pard
+\page
+
+\pard\plain\keepn
+#{\footnote HotKeys}
+${\footnote Hot Keys}
+{ \f1\fs18\b\sb120 Hot Keys}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 While running {\b KINSole} you may use these key combinations:\pard
+\par \fi0\li0 \bullet   {\b Alt-X/Alt-Q} - Terminate telnet session and leave {\b KINSole}.
+\par \fi0\li0 \bullet   {\b Alt-Y} - Send {\b AYT (Are You There)} telnet command. Remote host (if it supports telnet protocol as it's supposed to) should provide you with visible/printable/audible feedback stating that it's alive. You may want to use it when running program which takes unusually long time to finish and you suspect that your connection is dead.
+\par \fi0\li0 \bullet   {\b Shift-INS} Paste text from Windows Clipboard.
+\par \fi0\li0 \bullet   {\b Ctrl-Break} Send {\b IP (Interrupt Process)} telnet command. Usually effectively equivalent to Ctrl-C, but it's up to server to decide what to do in each case.
+\par \fi0\li0 \bullet   {\b Alt-INS} - Invoke {\b copying} from {\b KINSole} screen buffer.
+\par \fi0\li0 \bullet   {\b Alt-T} - Send {\b TIMING-MARK} request. As soon as response comes {\b KINSole} will flash window thrice or beep if window handle is not available for some reason.\pard
+\page
+
+\pard\plain\keepn
+#{\footnote BetaNotes}
+${\footnote Beta Notes}
+{ \f1\fs18\b\sb120 Beta Notes}
+\par\sa120\sb120\qj\pard \f1\fs18\sb120 A few things you may want to know about this Beta Release:\pard
+\par \fi0\li0 \bullet   Only two terminal emulation modules are included in this beta release - one for dumb terminal and one for vt100/102. If you try to select ANSI terminal type vt100 emulation will be selected, which is actually close enough to ANSI so you shouldn't suffer too much. Why would one want to use ANSI terminal emulation, anyway?
+\par \fi0\li0 \bullet   Telnet {\b LINEMODE} option ({\uldb {\b RFC1184}}{\v %!ExecFile("http://www.rfc-editor.org/rfc/rfc1184.txt")}) is still to come.
+\par \fi0\li0 \bullet   Pasting of text using console toolbar button may cause {\b KINSole} to lock up. Use {\b Shift-INS} instead.\pard
+\page
+}

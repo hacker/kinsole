@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<winhelp>
+ <topic id="About" title="About KINSole">
+  <heading scroll="no">About KINSole</heading>
+  <p><kin>KINSole</kin> is our <term>Win32</term> implementation of client side of the <term>telnet</term> protocol described in details in the <rfc num="854"/> and related RFCs (namely <rfc num="855"/>, <rfc num="857"/>, <rfc num="1091"/>, <rfc num="1073"/>, <rfc num="1572"/> and others). It uses <term>Win32</term> console and, therefore, can be run both windowed and in fullscreen mode.</p>
+  <p/>
+  <p><b><i>Enjoy!</i></b></p>
+  <license years="1998, 2002"/>
+  <credits/>
+ </topic>
+ <topic id="News" title="Beta News">
+  <heading scroll="no">Beta News</heading>
+  <newsfor version="1.00 Beta 3" date="August 19st, 2002">
+   <ni>No changes in code. License change.</ni>
+  </newsfor>
+  <newsfor version="1.00 Beta 2" date="March 7th, 1998">
+   <ni>Better copying from <kin>KINSole</kin> window.</ni>
+   <ni>Better handling of cursor position when resizing window.</ni>
+   <ni>Sending <b>CR/LF</b> pair when pressing <b>ENTER</b>. This is of help when telnetting to non-telnet ports.</ni>
+   <ni>Corrected bug, preventing <kin>KINSole</kin> from pasting text to remote twice.</ni>
+   <ni>Improved handling of echoing. Previously <kin>KINSole</kin> didn't turn echo off on some systems, namely <b>Solaris</b>.</ni>
+   <ni>Typo causing <kin>KINSole</kin> not to show diamond characters in <b>VT10x</b> mode corrected.</ni>
+   <ni><b>GPF</b> when invoking <kin>KINSole</kin> with <b>-t</b> option fixed.</ni>
+   <ni>Hotkey (<b>Alt-INS</b>) for copy operation added. Not supposed to work under <product>Windows NT</product>.</ni>
+   <ni><b>Paste</b> is made aware of local echoing.</ni>
+   <ni>Default terminal type when telnetting to non-telnet port is now <b>TTY</b>.</ni>
+   <ni><b>Timing Mark</b> telnet option (<rfc num="860"/>) implemented (<b>Alt-T</b>).</ni>
+   <ni>Improved handling of window icon when starting from other <term>Win32</term> command line application.</ni>
+  </newsfor>
+ </topic>
+ <topic id="Using" title="Using KINSole">
+  <heading scroll="no">Using <kin>KINSole</kin></heading>
+  <p>You may run <kin>KINSole</kin> from your MS-DOS prompt by typing '<i>kinsole host port</i>'.</p>
+  <p>If you need to know more about custom options, please proceed to the <a href="#CmdOptions">Command Line Options</a> section.</p>
+ </topic>
+ <topic id="CmdOptions" title="Command Line Options">
+  <heading scroll="no">Command Line Options</heading>
+  <p>Usage:</p>
+  <p>KINSole [<i>options</i> ]<i>host</i>[ <i>port</i>]</p>
+  <p>Available options are:</p>
+  <ul>
+   <li><b>-r <i>##</i></b> or <b>-<i>##</i></b> - Try to set the number of rows in console screen buffer.</li>
+   <li><b>-c <i>##</i></b> - Try to set the number of columns in console screenbuffer.</li>
+   <li><note>Note: Changing of console's screenbuffer size either from command line or on remote host's request (ESC[?3h vt100/vt102 control sequence) may not work when in fullscreen mode.</note></li>
+   <li><b>-l <i>username</i></b> - Pass username to remote server in environment if remote server allows.</li>
+   <li><b>-e <i>var</i>=<i>val</i></b> - Pass environment variable to remote server.</li>
+   <li><b>-v <i>var</i>=<i>val</i></b> - Pass user environment variable to remote server.</li>
+   <li><b>-t <i>termtype</i></b> - Change preferred terminal type to pass to remote server. This option does not really force specific terminal emulation. Final decision on terminal type is left up to server. Both sides are supposed to negotiate terminal type when connecting so that both sides may feel satisfied. Default preference is <b>vt102</b>.</li>
+  </ul>
+ </topic>
+ <topic id="HotKeys" title="Hot Keys">
+  <heading scroll="no">Hot Keys</heading>
+  <p>While running <kin>KINSole</kin> you may use these key combinations:</p>
+  <ul>
+   <li><b>Alt-X/Alt-Q</b> - Terminate telnet session and leave <kin>KINSole</kin>.</li>
+   <li><b>Alt-Y</b> - Send <b>AYT (Are You There)</b> telnet command. Remote host (if it supports telnet protocol as it's supposed to) should provide you with visible/printable/audible feedback stating that it's alive. You may want to use it when running program which takes unusually long time to finish and you suspect that your connection is dead.</li>
+   <li><b>Shift-INS</b> Paste text from Windows Clipboard.</li>
+   <li><b>Ctrl-Break</b> Send <b>IP (Interrupt Process)</b> telnet command. Usually effectively equivalent to Ctrl-C, but it's up to server to decide what to do in each case.</li>
+   <li><b>Alt-INS</b> - Invoke <b>copying</b> from <kin>KINSole</kin> screen buffer.</li>
+   <li><b>Alt-T</b> - Send <b>TIMING-MARK</b> request. As soon as response comes <kin>KINSole</kin> will flash window thrice or beep if window handle is not available for some reason.</li>
+  </ul>
+ </topic>
+ <topic id="BetaNotes" title="Beta Notes">
+  <heading scroll="no">Beta Notes</heading>
+  <p>A few things you may want to know about this Beta Release:</p>
+  <ul>
+   <li>Only two terminal emulation modules are included in this beta release - one for dumb terminal and one for vt100/102. If you try to select ANSI terminal type vt100 emulation will be selected, which is actually close enough to ANSI so you shouldn't suffer too much. Why would one want to use ANSI terminal emulation, anyway?</li>
+   <li>Telnet <b>LINEMODE</b> option (<rfc num="1184"/>) is still to come.</li>
+   <li>Pasting of text using console toolbar button may cause <kin>KINSole</kin> to lock up. Use <b>Shift-INS</b> instead.</li>
+  </ul>
+ </topic>
+</winhelp>
