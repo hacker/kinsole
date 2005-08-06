@@ -1,7 +1,8 @@
 #include "resource.h"
 #include "../shared-code/install.h"
 
-#define	KINAME	"KINSole 1.1"
+#define VERSION "1.1.1"
+#define	KINAME	"KINSole " VERSION
 #define	SKINAME	"KINSole"
 
 BOOL Install(void)
@@ -58,6 +59,13 @@ FILE* inf=CREATE_INF_FILE(path, SKINAME ".INF");
 	fclose(inf);
 
 	REG_UNINSTALL_COMMAND(SKINAME,"Klever " KINAME,shortPath,SKINAME ".INF","Uninstall");
+    REG_UNINSTALL_ICON(SKINAME,path,SKINAME ".exe",0);
+    REG_UNINSTALL_COMMENT(SKINAME,"Klever " KINAME);
+    REG_UNINSTALL_VERSION(SKINAME,VERSION);
+    REG_UNINSTALL_LOCATION(SKINAME,path);
+    REG_UNINSTALL_PUBLISHER(SKINAME,"Klever Group");
+    REG_UNINSTALL_URLS(SKINAME,"http://www.klever.net/","http://kin.klever.net/kinsole/");
+
 
 	MessageBox(NULL,KINAME " installed successfully, you may now run it from command line, read documentation in 'Programs/Klever Group' menu or simply remove it using Control Panel Add/Remove Programs applet."," Rejoice!",MB_ICONINFORMATION|MB_OK);
 

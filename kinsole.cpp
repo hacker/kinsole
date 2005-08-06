@@ -16,7 +16,7 @@
 #include "windowsx.h"
 
 #define	DAMN_KIN_NAME		"KINSole"
-#define	DAMN_KIN_VERSION	"1.1"
+#define	DAMN_KIN_VERSION	"1.1.1"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -550,7 +550,7 @@ main(int argc,char*argv[])
 	if(argc<2){
 usagebye:
 		printf(
-			DAMN_KIN_NAME " " DAMN_KIN_VERSION ", Copyright (c) 1998-2004 Klever Group (http://www.klever.net/)\n\n"
+			DAMN_KIN_NAME " " DAMN_KIN_VERSION ", Copyright (c) 1998-2005 Klever Group (http://www.klever.net/)\n\n"
 			"Usage:\t" DAMN_KIN_NAME " [<options> ]<host-name/ip-address>[ <port>]\n\n"
 			"Options are:\n"
 			"-r## or -##\tSet number of rows in console screenbuffer\n"

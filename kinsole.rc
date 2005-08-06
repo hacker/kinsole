@@ -63,8 +63,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,1,0,0
- PRODUCTVERSION 1,1,0,0
+ FILEVERSION 1,1,1,0
+ PRODUCTVERSION 1,1,1,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x29L
@@ -81,13 +81,13 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Klever Group (http://www.klever.net)\0"
             VALUE "FileDescription", "KINSole, telnet client\0"
-            VALUE "FileVersion", "1, 1, 0, 0\0"
+            VALUE "FileVersion", "1, 1, 1, 0\0"
             VALUE "InternalName", "KINSOLE\0"
-            VALUE "LegalCopyright", "Copyright © 1998-2004 Klever Group (http://www.klever.net/)\0"
+            VALUE "LegalCopyright", "Copyright © 1998-2005 Klever Group (http://www.klever.net/)\0"
             VALUE "LegalTrademarks", "Klever Group (http://www.klevernet/)\0"
             VALUE "OriginalFilename", "KINSOLE.EXE\0"
             VALUE "ProductName", "KINSole\0"
-            VALUE "ProductVersion", "1, 1, 0, 0\0"
+            VALUE "ProductVersion", "1, 1, 1, 0\0"
         END
     END
     BLOCK "VarFileInfo"

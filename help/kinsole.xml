@@ -5,11 +5,14 @@
   <p><kin>KINSole</kin> is our <term>Win32</term> implementation of client side of the <term>telnet</term> protocol described in details in the <rfc num="854"/> and related RFCs (namely <rfc num="855"/>, <rfc num="857"/>, <rfc num="1091"/>, <rfc num="1073"/>, <rfc num="1572"/> and others). It uses <term>Win32</term> console and, therefore, can be run both windowed and in fullscreen mode.</p>
   <p/>
   <p><b><i>Enjoy!</i></b></p>
-  <license years="1998-2004"/>
+  <license years="1998-2005"/>
   <credits/>
  </topic>
  <topic id="News" title="What's new">
   <heading scroll="no">What's New</heading>
+  <newsfor version="1.1.1" date="August 6th, 2005">
+   <ni>Fixed uninstall procedure so that it works on XP</ni>
+  </newsfor>
   <newsfor version="1.1" date="July 11th, 2004">
    <ni>No changes in code. License change.</ni>
   </newsfor>
